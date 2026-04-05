@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yug Designer Furniture</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#222;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:280px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.price{
+color:#27ae60;
+font-size:20px;
+margin:10px 0;
+}
+
+button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+.order-section{
+margin-top:50px;
+text-align:center;
+padding-bottom:40px;
+}
+
+input, select{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+.contact{
+margin-top:15px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Yug Designer Furniture
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc">
+<div class="card-content">
+<h2>Luxury Sofa</h2>
+<p>Comfortable modern sofa</p>
+<div class="price">₹25,000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693314120-0d443867891c">
+<div class="card-content">
+<h2>Wooden Dining Table</h2>
+<p>Premium 6-seater dining table</p>
+<div class="price">₹18,000</div>
+</div>
+</div>
+
+</div>
+
+<div class="order-section">
+
+<h2>Place Your Order</h2>
+
+<div class="contact">
+📞 Call / WhatsApp: <strong>+91 9987490254</strong><br>
+📍 PIN Code: <strong>400067</strong>
+</div>
+
+<form onsubmit="sendOrder(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required><br>
+
+<input type="text" id="address" placeholder="Address" required><br>
+
+<select id="product" required>
+<option value="">Select Product</option>
+<option>Luxury Sofa - ₹25,000</option>
+<option>Wooden Dining Table - ₹18,000</option>
+</select><br>
+
+<button type="submit">Order on WhatsApp</button>
+
+</form>
+
+</div>
+
+<script>
+function sendOrder(){
+let name = document.getElementById("name").value;
+let address = document.getElementById("address").value;
+let product = document.getElementById("product").value;
+
+let message = "New Order:%0A";
+message += "Name: " + name + "%0A";
+message += "Address: " + address + "%0A";
+message += "Product: " + product;
+
+let phone = "919987490254"; // your number with country code
+
+let url = "https://wa.me/" + phone + "?text=" + message;
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+  </html>
