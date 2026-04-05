@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yug Designer Furniture</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#222;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:280px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.price{
+color:#27ae60;
+font-size:20px;
+margin:10px 0;
+}
+
+button{
+background:#222;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.order-section{
+margin-top:50px;
+text-align:center;
+}
+
+input, select{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Yug Designer Furniture
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc">
+<div class="card-content">
+<h2>Luxury Sofa</h2>
+<p>Comfortable modern sofa</p>
+<div class="price">₹25,000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693314120-0d443867891c">
+<div class="card-content">
+<h2>Wooden Dining Table</h2>
+<p>Premium 6-seater dining table</p>
+<div class="price">₹18,000</div>
+</div>
+</div>
+
+</div>
+
+<div class="order-section">
+
+<h2>Place Your Order</h2>
+
+<form onsubmit="orderPlaced(); return false;">
+
+<input type="text" placeholder="Your Name" required><br>
+
+<input type="text" placeholder="Address" required><br>
+
+<select required>
+<option value="">Select Product</option>
+<option>Luxury Sofa</option>
+<option>Wooden Dining Table</option>
+</select><br>
+
+<button type="submit">Order Now</button>
+
+</form>
+
+</div>
+
+<script>
+
+function orderPlaced(){
+alert("Your order has been placed! We will contact you soon.");
+}
+
+</script>
+
+</body>
+  </html>
